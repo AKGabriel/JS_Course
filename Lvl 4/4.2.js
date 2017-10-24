@@ -222,3 +222,36 @@
 // }
 //
 // intersection([1, 2, 3], [101,2,1,10], [2,1]);
+
+
+//Task 14
+// var arr = [2, 3, 1, 4];
+// var arrr = [];
+// for (var i = 0; i < arr.length; i++) {
+//     for (var m = 0; m < arr[i]; m++) {
+//         arrr.push(arr[i]);
+//     }
+// }
+// console.log (arrr);
+
+
+//Task 15
+// function f(arr, size) {
+//     for (var i = arr.length; i < size; i++) {
+//         arr.push(0);
+//     }
+//     console.log(arr);
+// }
+//
+// f([1, 2, 3], 6);
+
+
+//Task 16
+// var arr = [3, 5, -7, -2, 3, -54, 1, 0, -4];
+//
+// function sortthisshitplease(a) {
+//     return a < 0;
+// }
+//
+// var arr1 = arr.filter(sortthisshitplease);
+// console.log(arr1[0], arr1[1], arr1[2]);
