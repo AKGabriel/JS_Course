@@ -41,9 +41,7 @@
 //     }
 //     console.log(sum);
 // }
-// getPrimesSumBelow(10);
-
-// the result for getPrimesSumBelow(3) and getPrimesSumBelow(2) is not right
+// getPrimesSumBelow(10)
 
 
 //Task 5-6
