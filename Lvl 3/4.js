@@ -8,9 +8,11 @@
 //Task 2
 // function double(x) {
 // x = prompt("Give me a number. Gimme, gimme!")*2;
+// prompt("Give me a number. Gimme, gimme!") will return string so the result will be NaN (
+// and you should return multiplied number using x that you should pass to the function
 // console.log(x);
 // }
-// double();
+// double(); // you have to pass argument to function you pass nothing
 
 
 //Task 3
@@ -41,10 +43,13 @@
 // }
 // getPrimesSumBelow(10);
 
+// the result for getPrimesSumBelow(3) and getPrimesSumBelow(2) is not right
+
 
 //Task 5-6
 // function yep(a) {
 //     return (a % 2 === 0)
+//     good!)
 // }
 
 
@@ -52,6 +57,7 @@
 // function range(x, y) {
 //     for (var i = x; i <= y; i++) {
 //         if (yep(i) === false) {
+            // or just type if(!yep(i))
 //             console.log(i);
 //         }
 //     }
