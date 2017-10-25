@@ -7,6 +7,8 @@
 //     (alert("Are you retarded? I said '0'! -___-"));
 // }
 
+// ?? Проверьте работу скрипта при a, равном 1, 0, -3.
+
 
 //Task 2
 // var a = prompt("Are you Batman?", "");
@@ -20,10 +22,14 @@
 //     alert("Do you even speak English..?");
 // }
 
+// ?? Проверьте работу скрипта при a, равном 'test', 'тест', 3.
+
 
 //Task 3
 //                        //A
 // var test = prompt("Sky is red, true or false?", "");
+
+// тут проверять на true нужно как булевое значение а не строку "true"
 // if (test === "true") {
 //     console.log("Da");
 // }
@@ -35,6 +41,7 @@
 // }
 //                        //B
 // var test = prompt("Sky is red, true or false?", "");
+// то же самое буловое значение true || false и switch в даном случае лишний потому что может быть либо true либо false
 // switch (test) {
 //     case "true":
 //         console.log("Da");
@@ -72,6 +79,8 @@
 // }
 // console.log(result);
 
+// ?? Проверьте работу скрипта при a и b, равных 2 и 5, 3 и 1.
+
 
 //Task 5
 // var a = +prompt("Pick a number.", "");
@@ -87,6 +96,7 @@
 //     alert("Here, take that " + a + ".");
 // }
 
+// ?? Проверьте работу скрипта при a, равном 5, 0, -3, 2.
 
 //Task 6
 // var a = +prompt("Pick a number less or equal 1.", "");
@@ -99,6 +109,7 @@
 //     alert("Nope!");
 // }
 
+// ?? Проверьте работу скрипта при a и b, равном 1 и 3, 0 и 6, 3 и 5.
 
 //Task 7
 // var a = +prompt("Pick a number 2<a<11.", "");
@@ -155,6 +166,7 @@
 // else {
 //     alert("Sorry, not supported.");
 // }
+// лушчше бы обьвить массивы отдельно в 3 перменных для разных языков и потом использовать их в условиях и в многомерных массивах
 //                        //Switch+Multi_Array
 // var arr = [];
 // var marr = [[" mo", " tu", " we", " th", " fr", " sa", " su"],
