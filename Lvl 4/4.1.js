@@ -21,6 +21,7 @@
 // function addClass(obj, cls) {
 //     var arr = obj.classname.split(" ");
 //     for (var i = 0; i <= arr.length - 1; i++) {
+        // было бы еще здорово сделать все буквы в нижнем регистре, потому что она могут быть в разных регистрах
 //         if (arr[i] === cls) {
 //             break;
 //         }
