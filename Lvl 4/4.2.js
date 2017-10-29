@@ -5,6 +5,8 @@
 //     var arr = input.split("");
 //     for (var i = 0; i < arr.length; i++) {
 //         if (arr[i] === " " || arr[i] === "," || arr[i] === ".") { //should also consider other punctuation as well. Is there a method for this?)
+               // you can check if symbol number from anssi table from to but I don't think this is nessesary here you should check 
+               // is the string is Pal it include also all punctuation
 //             arr.splice(i, 1);
 //             i = i - 1;
 //         }
@@ -119,6 +121,7 @@
 // // Task 8-7
 // var name = prompt("Who are you?!");
 // var age = +prompt("And how old are you?");
+   // этот цикл тут лишний
 // for (var i = 0; i < arr.length; i++) {
 //     if (name === arr[i].name) {
 //         alert("I'm watching you!");
@@ -162,6 +165,11 @@
 // var arr1 = [1, 2, 3];
 // var arr2 = [4, 5, 6, 7, 8];
 // var arr3 = [];
+
+
+// чтобы не делать 2 одинаковых цикла при if or else 
+// можно было сделать проверку какой массив больше и просто тот который меньше сохранить в 1 переменной например arrStart
+// а другой сохранить в другой и делать уже только 1 раз проход ( в общем смысл в том что бы не дублировать код
 //
 // if (arr1.length > arr2.length) {
 //     var m = arr1.length - arr2.length;
