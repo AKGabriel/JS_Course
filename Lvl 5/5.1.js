@@ -59,6 +59,7 @@
 
 
 //Task 5
+// where is the variable i created?? and why -1?
 // function createCount() {
 //     i = -1;
 //     return makeCount();
@@ -77,6 +78,7 @@
 //Task 6
 // function createCount(startFrom) {
 //     i = startFrom - 1;
+// ?? why startrom - 1
 //     return makeCount();
 // }
 //
