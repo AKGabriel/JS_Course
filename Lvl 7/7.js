@@ -171,23 +171,27 @@ for (var x = 0; x < table1011.length; x++) {
     }
 }
 
-//Task 10 Variant 2: stop when any horizontal line is completed
+//Task 10 Variant 2: stop when any horizontal or vertical line is completed
 var stop = 0;
 var table10 = document.getElementById("table10").children[0].children;
-for (var x = 0; x < table10.length; x++) {
-    for (var y = 0; y < table10[x].children.length; y++) {
-        table10[x].children[y].addEventListener("click", function () {
+for (var x1 = 0; x1 < table10.length; x1++) {
+    for (var y1 = 0; y1 < table10[x1].children.length; y1++) {
+        table10[x1].children[y1].addEventListener("click", function () {
             if (stop === 1) {
                 alert("Enough! -___-");
             }
             else {
                 for (var x = 0; x < table10.length; x++) {
                     var count = 0;
+                    var count1 = 0;
                     for (var y = 0; y < table10[x].children.length; y++) {
                         if (table10[x].children[y].style.backgroundColor === "red") {
                             count++;
                         }
-                        if (count > 4) {
+                        if (table10[y].children[x].style.backgroundColor === "red") {
+                            count1++;
+                        }
+                        if (count > 4 || count1 > 4) {
                             stop = 1;
                         }
                         else {
