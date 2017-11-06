@@ -16,9 +16,11 @@ document.querySelector("form").insertBefore(nodeCloned, document.querySelector("
 //Task 3
 var inputs = document.querySelectorAll("input");
 for (var i = 0; i < inputs.length; i++) {
+    // setAttribute will replce the whole class we need to add a class to inputs - better use className or other approach
     inputs[i].setAttribute("class", "input-lg");
     inputs[i].setAttribute("id", inputs[i].previousElementSibling.innerHTML); //Part of Task 4
     inputs[i].setAttribute("placeholder", "Enter your " +inputs[i].id); //Complete Task 5. Why not use code written before, right?=)
+    // yes!)
 }
 
 
