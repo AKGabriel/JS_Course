@@ -59,12 +59,18 @@ function removeColor(color) {
 }
 
 //Task 3
-var boldText = document.getElementById("boldText").innerHTML;
-var highlighted = boldText.replace(/<strong>/g, "<span style='background-color:yellow'><strong>");
-var highlighted2 = highlighted.replace(/<\/strong>/g, "</strong></span>");
+document.getElementById("boldText").addEventListener("mouseover", function () {
+    var boldText = document.getElementById("boldText").innerHTML;
+    var highlighted = boldText.replace(/<strong>/g, "<span style='background-color:yellow'><strong>");
 //Works too :)
-// var highlighted2 = highlighted.replace(new RegExp("</strong>", "g"), "</strong></span>");
-document.getElementById("boldText").innerHTML = highlighted2;
+// highlighted.replace(new RegExp("</strong>", "g"), "</strong></span>");
+    document.getElementById("boldText").innerHTML = highlighted.replace(/<\/strong>/g, "</strong></span>");
+});
+document.getElementById("boldText").addEventListener("mouseout", function() {
+    var boldText = document.getElementById("boldText").innerHTML;
+    var highlighted = boldText.replace(/<span style="background-color:yellow">/g, "");
+    document.getElementById("boldText").innerHTML = highlighted.replace(/<\/span>/g, "");
+});
 
 
 //Task 4
@@ -80,9 +86,18 @@ function insert_Row() {
 
 //Task 5
 //Made one button for both actions needed
-function showNotification() {
+function showHide() {
+    if (document.getElementsByClassName("popup")[0].getAttribute("hidden") === "") {
+        showNotification({show: true});
+    }
+    else {
+        showNotification({show: false});
+    }
+}
+
+function showNotification(options) {
     var pop = document.getElementsByClassName("popup")[0];
-    if (pop.getAttribute("hidden") === "") {
+    if (options.show) {
         pop.removeAttribute("hidden");
     }
     else {
