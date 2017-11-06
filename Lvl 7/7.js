@@ -191,7 +191,7 @@ for (var x1 = 0; x1 < table10.length; x1++) {
                         if (table10[y].children[x].style.backgroundColor === "red") {
                             count1++;
                         }
-                        if (count > 4 || count1 > 4) {
+                        if (count > table10.length - 1 || count1 > table10[x].children.length - 1) {
                             stop = 1;
                         }
                         else {
