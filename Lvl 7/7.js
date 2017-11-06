@@ -59,6 +59,7 @@ function removeColor(color) {
 }
 
 //Task 3
+// это должно происходить на mouseenter и mouseout а не сразу же при открытии страницы) тема же события
 var boldText = document.getElementById("boldText").innerHTML;
 var highlighted = boldText.replace(/<strong>/g, "<span style='background-color:yellow'><strong>");
 var highlighted2 = highlighted.replace(/<\/strong>/g, "</strong></span>");
@@ -68,6 +69,7 @@ document.getElementById("boldText").innerHTML = highlighted2;
 
 
 //Task 4
+// то де самое на событие
 function insert_Row() {
     var element = document.getElementById("sampleTable");
     var newRow = element.appendChild(document.createElement("tr"));
@@ -80,6 +82,7 @@ function insert_Row() {
 
 //Task 5
 //Made one button for both actions needed
+// там были другие условия для этого, и в функцию передавался обьект
 function showNotification() {
     var pop = document.getElementsByClassName("popup")[0];
     if (pop.getAttribute("hidden") === "") {
