@@ -27,14 +27,81 @@ function printNumbersInterval2() {
 }
 
 
-//Task 3
-//Made two buttons: "Start/Wait/Continue" and "Stop". I think it is more user friendly this way. :)
-function wat(i) {
-    timer = setInterval(function () {
-        document.getElementById("label3").innerHTML = "" + i + "";
-        console.log(i);
+//Task 3.1 Simple variant. Counts only seconds.
+// //Made two buttons: "Start/Wait/Continue" and "Stop". I think it is more user friendly this way. :)
+function watA(i) {
+    timerA = setInterval(function () {
+        document.getElementById("label3A").innerHTML = "" + i + "";
         i++;
     }, 1000);
+}
+
+function t3StartA() {
+    if (document.getElementById("button3_1A").value === "Start") {
+        document.getElementById("button3_1A").value = "Wait";
+        document.getElementById("button3A").removeAttribute("hidden");
+        watA(1);
+    }
+    else if (document.getElementById("button3_1A").value === "Wait") {
+        clearInterval(timerA);
+        document.getElementById("button3_1A").value = "Continue";
+    }
+    else if (document.getElementById("button3_1A").value === "Continue") {
+        document.getElementById("button3_1A").value = "Wait";
+        watA(+document.getElementById("label3A").innerHTML + 1);
+    }
+}
+
+function t3StopA() {
+    clearInterval(timerA);
+    document.getElementById("label3A").innerHTML = "";
+    document.getElementById("button3_1A").value = "Start";
+    document.getElementById("button3A").setAttribute("hidden", "");
+}
+
+//Task 3.2 Counts msec, sec, min, hr. Also adds "0" if number is less than 10
+// Sorry for mess, didn't have much time to do it right. Was challenged to rewrite previous code by friend. =)
+function wat(i) {
+    timer = setInterval(function () {
+        if (i === 100) {
+            document.getElementById("label3").innerHTML = "00";
+            i = 1;
+            if (document.getElementById("label32").innerHTML < 9) {
+                document.getElementById("label32").innerHTML = "0" + (+document.getElementById("label32").innerHTML + 1);
+            }
+            else {
+                document.getElementById("label32").innerHTML = "" + (+document.getElementById("label32").innerHTML + 1)
+            }
+        }
+        else if (i < 10) {
+                document.getElementById("label3").innerHTML = "0" + i + "";
+                i++;
+            }
+        else {
+            document.getElementById("label3").innerHTML = "" + i + "";
+            i++;
+        }
+        if (+document.getElementById("label32").innerHTML === 60) {
+            if (+document.getElementById("label33").innerHTML < 9) {
+                document.getElementById("label32").innerHTML = "00";
+                document.getElementById("label33").innerHTML = "0" + (+document.getElementById("label33").innerHTML + 1);
+            }
+            else {
+                document.getElementById("label32").innerHTML = "00";
+                document.getElementById("label33").innerHTML = "" + (+document.getElementById("label33").innerHTML + 1);
+            }
+        }
+        if (+document.getElementById("label33").innerHTML === 60) {
+            if (+document.getElementById("label34").innerHTML < 9) {
+                document.getElementById("label33").innerHTML = "00";
+                document.getElementById("label34").innerHTML = "0" + (+document.getElementById("label33").innerHTML + 1);
+            }
+            else {
+                document.getElementById("label33").innerHTML = "00";
+                document.getElementById("label34").innerHTML = "" + (+document.getElementById("label33").innerHTML + 1);
+            }
+        }
+    }, 10);
 }
 
 function t3Start() {
@@ -55,7 +122,10 @@ function t3Start() {
 
 function t3Stop() {
     clearInterval(timer);
-    document.getElementById("label3").innerHTML = "";
+    document.getElementById("label3").innerHTML = "00";
+    document.getElementById("label32").innerHTML = "00";
+    document.getElementById("label33").innerHTML = "00";
+    document.getElementById("label34").innerHTML = "00";
     document.getElementById("button3_1").value = "Start";
     document.getElementById("button3").setAttribute("hidden", "");
 }
