@@ -134,6 +134,7 @@ function t3Stop() {
 //Task 4
 //WAT???
 
+// а что непонятно с заданием?
 
 //Task 5
 function wat2(i) {
@@ -175,6 +176,8 @@ function t5Stop() {
 
 //Task 6
 //And again.. WAT???
+
+// а тут что не понятно?
 
 
 //Task 7
